@@ -27,7 +27,7 @@ public class ProductRepository {
     }
 
     public void printProductById(int id) {
-        System.out.println(list.stream().filter(e -> e.getId() ==id).findFirst().get().toString());
+        System.out.println(list.stream().filter(e -> e.getId() == id).findFirst().get().toString());
     }
 
     public Product getProductById(int id) {

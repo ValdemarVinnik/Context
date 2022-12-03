@@ -27,17 +27,17 @@ public class Cart {
         this.repository = repository;
     }
 
-    public void addProductById(int id){
+    public void addProductById(int id) {
         Product product = repository.getProductById(id);
         productList.add(product);
     }
 
-    public void deleteProductById(int id){
+    public void deleteProductById(int id) {
         productList.remove(productList.stream().filter(e -> e.getId() == id).findFirst().get());
     }
 
-    public void printProductList(){
-        productList.stream().forEach((e)-> System.out.println(e));
+    public void printProductList() {
+        productList.stream().forEach((e) -> System.out.println(e));
     }
 }
 
